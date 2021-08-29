@@ -174,7 +174,7 @@ try
         end
         
         % use GetSecs can start timing
-  
+        fprintf('trial %d\n',trial)
         tStart = GetSecs;
         while respToBeMade == true
             theImage=imread(fullfile('image','question',[num2str(cardArray(1,cardOrder(trial)))...
@@ -329,7 +329,7 @@ try
     Screen('Flip', window);
     KbStrokeWait;
     sca;
-    header = {'Rule','Ans', 'Resp', 'RT', 'Correct'};
+    header = {'Rule','Atribute', 'Resp', 'RT', 'Correct'};
     data_table = cell2table(data, 'VariableNames', header);
     % Create a csv file to save data
     exp_data = strcat([filename '\'], 'exp_', date, '.csv');
