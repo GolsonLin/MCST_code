@@ -73,7 +73,7 @@ please see [Psytoolbox-3](http://psychtoolbox.org/download.html)
 |  1.Color |     Red     |     Green      |    Blue    |   Yellow   |
 |  2.Shape | Circle `🔘` | triangle `🔺` | Cross `➕` | Stars `✴` |
 | 3.Number |       1     |       2        |     3      |      4     |
-|                        * 0 not decide rule  |
+|                        * 0 not decide rule  | 😊 |Smile mesns answer is right.|🙁 |Sad means answer wrong.|
 
 ## Troubleshooting
 
