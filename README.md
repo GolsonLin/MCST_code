@@ -1,21 +1,8 @@
 # MCST_code
-the modify card sorting refer to [this article](https://github.com/GolsonLin/MCST_code/blob/main/modified%20CS.pdf "The modified card sorting test sensitive to frontal lobe defects")
 ---
+the modify card sorting refer to [this article](https://github.com/GolsonLin/MCST_code/blob/main/modified%20CS.pdf "The modified card sorting test sensitive to frontal lobe defects")
 ## Table of Contents
 
-* [MCST\_code](#mcst_code)
-	* [the modify card sorting refer to <a href="https://github\.com/GolsonLin/MCST\_code/blob/main/modified%20CS\.pdf" title="The modified card sorting test sensitive to frontal lobe defects">this article</a>](#the-modify-card-sorting-refer-to-this-article)
-	* [Content](#content)
-	* [Install](#install)
-	* [Parameter](#parameter)
-		* [image](#image)
-	* [Execute the test](#execute-the-test)
-	* [Output file](#output-file)
-	* [Troubleshooting](#troubleshooting)
-	* [Update History](#update-history)
-		* [V1](#v1)
-		* [V2](#v2)
-	* [Reference](#reference)
 
 ## Install
 
