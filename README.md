@@ -44,7 +44,7 @@ please see [Psytoolbox-3](http://psychtoolbox.org/download.html)
 `111.png` `222.png` `333.png` `444.png` the Answer cards
 
 ## Execute the test
-
+0. Run MWCST
 1. Press any key to begin
 2. Question cards at lower left and four Answer cards at the upper right
 3. choose one Anwser cards if this card not have any Question card atributes, zero as the rule number means the rule not descide
