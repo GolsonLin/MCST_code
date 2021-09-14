@@ -181,7 +181,7 @@ try
                 num2str(cardArray(2,cardOrder(trial))) num2str(cardArray(3,cardOrder(trial))) '.png']));
             cardAttributs=cardArray(:,cardOrder(trial));
             stiIMG=background;
-            stiIMG(round(screenYpixels*5/7):round(screenYpixels*5/7)+199,round(screenXpixels*1/10):round(screenXpixels*1/10)+124,:)=theImage;
+            stiIMG(round(screenYpixels*4/7):round(screenYpixels*4/7)+199,round(screenXpixels*3/10):round(screenXpixels*3/10)+124,:)=theImage;
             % Draw the image
             % DrawFormattedText(window, char(theWord), 'center', 'center', theColor);
             imageTexture = Screen('MakeTexture', window, stiIMG);
