@@ -1,0 +1,1 @@
+   function [R,C]=checkAns(response,ruleAns,Attributes)        if ruleAns~=0            if response == Attributes(ruleAns,1)                R='T';                C=1;            else                R='F';                C=0;            end        elseif ruleAns==0            R='F';            C=0;        end                    endfunction

@@ -1,0 +1,5 @@
+in octave
+change your path to
+~install\Psychtoolbox-3\Psychtoolbox\
+command windows
+DownloadPsychtoolbox('C:\Toolbox')
