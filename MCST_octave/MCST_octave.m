@@ -10,7 +10,7 @@ continueCondition = 6;
 % In this modify card sorting, question cards have 24 cards and all the cards doesn't
 %have two atributes as same as answer cards.    
 % one cards can be used twice, so the most cards we can use only 48 cards.
-numTrials = 10;
+numTrials = 48;
 % make output folder
 folderNumber=1;
 while 1
