@@ -7,7 +7,7 @@ continueCondition = 6;
 % In this modify card sorting, question cards have 24 cards and all the cards doesn't
 %have two atributes as same as answer cards.    
 % one cards can be used twice, so the most cards we can use only 48 cards.
-numTrials = 48;
+numTrials = 24;
 % make output folder
 folderNumber=1;
 while 1
@@ -33,8 +33,11 @@ try
     
     % Set the screen number to the external secondary monitor if there is one
     % connected
-    screenNumber = max(Screen('Screens'));
     
+    %Screen('Preference', 'SkipSyncTests', 1)
+    
+    screenNumber = max(Screen('Screens'));
+
     % Define black, white and grey
     white = WhiteIndex(screenNumber);
     grey = white / 2;
@@ -120,12 +123,7 @@ try
     % True & False image render
     F=imread('image/sadred.png');
     T=imread('image/happygreen.png');
-    RIMG=background;
-    RIMG(round(screenYpixels*4/7):round(screenYpixels*4/7)+251,round(screenXpixels*3/5):round(screenXpixels*3/5)+274,:)=F;
-    FTexture = Screen('MakeTexture', window, RIMG);
-    RIMG=background;
-    RIMG(round(screenYpixels*4/7):round(screenYpixels*4/7)+251,round(screenXpixels*3/5):round(screenXpixels*3/5)+274,:)=T;
-    TTexture = Screen('MakeTexture', window, RIMG);
+    
     %----------------------------------------------------------------------
     %                     Make a matrix for question order 
     %----------------------------------------------------------------------
@@ -142,8 +140,15 @@ try
     %1 2 3 after rule is 1 2 3
     rule_decide=0;
     for trial = 1:numTrials
-      
-        
+        Screen('Close')
+        Screen('Flip', window);
+        RIMGF=background;
+        RIMGF(round(screenYpixels*4/7):round(screenYpixels*4/7)+251,round(screenXpixels*3/5):round(screenXpixels*3/5)+274,:)=F;
+        FTexture = Screen('MakeTexture', window, RIMGF);
+        RIMGT=background;
+        RIMGT(round(screenYpixels*4/7):round(screenYpixels*4/7)+251,round(screenXpixels*3/5):round(screenXpixels*3/5)+274,:)=T;
+        TTexture = Screen('MakeTexture', window, RIMGT);
+        %
         % Cue to determine whether a response has been made
         respToBeMade = true;
         
@@ -181,7 +186,7 @@ try
                 num2str(cardArray(2,cardOrder(trial))) num2str(cardArray(3,cardOrder(trial))) '.png']));
             cardAttributs=cardArray(:,cardOrder(trial));
             stiIMG=background;
-            stiIMG(round(screenYpixels*4/7):round(screenYpixels*4/7)+199,round(screenXpixels*3/10):round(screenXpixels*3/10)+124,:)=theImage;
+            stiIMG(round(screenYpixels*5/7):round(screenYpixels*5/7)+199,round(screenXpixels*1/2):round(screenXpixels*1/2)+124,:)=theImage;
             % Draw the image
             % DrawFormattedText(window, char(theWord), 'center', 'center', theColor);
             imageTexture = Screen('MakeTexture', window, stiIMG);
@@ -218,9 +223,11 @@ try
                 end
                 
                 [R,C]=checkAns(response,rule_now,cardAttributs);
+                
                 Screen('DrawTexture', window,eval([R 'Texture']), [], [], 0);
                 Screen('Flip', window);
                 WaitSecs(1);
+
             elseif keyCode(button_2)
                 response = 2;
                 respToBeMade = false;
@@ -298,6 +305,7 @@ try
                 Screen('Flip', window);
                 WaitSecs(1);
             end
+               
             
         end
         tEnd = GetSecs;
